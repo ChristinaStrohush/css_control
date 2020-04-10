@@ -1,0 +1,138 @@
+@mixin fontChange ($clr, $fnt-sz, $fnt-wght) {
+    color: $clr;
+    font-size: $fnt-sz;
+    font-weight: $fnt-wght;
+}
+
+@mixin blockSize ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin textMainTittle {
+    font-family: $mainFontFamily;
+    @include fontChange($mainTittleColor, 26px, 700);
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+@mixin logoTop {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 20px, 700);
+    text-transform: uppercase;
+}
+
+@mixin mainLinkFooter {
+    font-family: $mainFontFamily;
+    @include fontChange($mainTittleColor, 14px, 700);
+    text-decoration: none;
+}
+
+@mixin secondLinkFooter {
+    font-family: $secondFontFamily;
+    @include fontChange($inputColor, 14px, 300);
+}
+
+@mixin logoDown {
+    font-family: $mainFontFamily;
+    @include fontChange($secondColor, 20px, 300);
+    text-transform: uppercase;
+}
+
+@mixin textTittleHeader {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 52px, 700);
+    text-transform: uppercase;
+}
+
+@mixin buttonMain {
+    font-family: $mainFontFamily;
+    border-width: 2px; 
+    border-style: solid;
+    border-radius: 20px;
+    padding: 6px 30px;
+}
+
+@mixin inputMain {
+    font-family: $secondFontFamily;
+    border: 1px solid $inputColorBorder;
+    @include fontChange ($inputColor, 14px, 300);
+    padding: 6px 100px 6px 6px;
+}
+
+@mixin conteinerAbout{
+    @include blockSize (80%, 80%);
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin partnersPart {
+    @include blockSize (24%, 100%);
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin bgCoverCenter {
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin avatar{
+    @include blockSize (200px, 200px);
+    @include bgCoverCenter;
+    border-radius: 50%;
+    position: relative;
+}
+
+@mixin avatarAfter {
+    display: block;
+    @include blockSize (50px, 50px);
+    content: '';
+    border-radius: 50%;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+@mixin namePartner {
+    @include fontChange (#444, 14px, 700);
+    font-family: $mainFontFamily;
+    padding: $paddingTotal;
+}
+
+@mixin aboutPartner {
+    @include fontChange(#666, 14px, 300);
+    font-family: $secondFontFamily;
+}
+
+@mixin ideasPart {
+    @include blockSize (100%, 300px);
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin ideasPhoto{
+    @include blockSize (32%, 94%);
+    @include bgCoverCenter;
+    @include flexCenter;
+}
+
+@mixin ideasPhotoBig{
+    @include blockSize (66%, 94%);
+    @include bgCoverCenter;
+    @include flexCenter;
+}
+
+@mixin ideasTittle {
+    font-family: $mainFontFamily;
+    @include fontChange($mainColor, 22px, 700);
+    text-shadow: 3px 1px 7px $secondTitleColor;
+}

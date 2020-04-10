@@ -1,0 +1,49 @@
+.footer{
+    &__lineZone{
+        color: $secondColor;
+    }
+    &__nav{
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        &__menu{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            &__logo{
+                @include logoDown;
+            }
+            &__company{
+                &__link{
+                    @include mainLinkFooter;
+                }
+                &__linksDown{
+                    padding: $paddingTotal;
+                    list-style: none;
+                    @include secondLinkFooter;
+                    &__about{
+                        padding: 5px 0;
+                    }
+                }
+            }
+            &__partners{
+                &__link{
+                    @include mainLinkFooter;
+                }
+            }
+        }
+        &__desing{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &__text{
+                font-family: $mainFontFamily;
+                @include fontChange ($desingColor, 10px, 700);
+                text-transform: uppercase;
+                padding: $paddingTotal;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.header{
+    @include blockSize (100%, 100vh);
+    background-image: url(https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg);
+    // background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/Background.jpg);
+    @include bgCoverCenter;
+    @include flexCenter;
+    flex-direction: column;
+    &__nav{
+        @include blockSize (80%, 70px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $mainFontFamily;
+        &__logo{
+            @include logoTop;
+        }
+        &__button{
+            @include fontChange($mainColor, 14px, 700);
+            &__login{
+                color: $mainColor;
+                padding: 0 6px;
+            }
+            &__singup{
+                @include buttonMain;
+                border-color: $mainColor;
+                color: $mainColor;
+            }
+        }
+    }
+    &__tittle{
+        @include blockSize (80%, calc(100vh - 70px));
+        @include flexCenter;
+        flex-direction: column;
+        text-align: center;
+        &__top{
+            @include textTittleHeader;
+        }
+        &__second{
+            font-family: $secondFontFamily;
+            @include fontChange(#F7F3F2, 24px, 300);
+            padding: 30px;
+        }
+        &__button{
+            font-family: $mainFontFamily;
+            @include buttonMain;
+            @include fontChange($mainColor, 14px, 700);
+        }
+    }
+}
