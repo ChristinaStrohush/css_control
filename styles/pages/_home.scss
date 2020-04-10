@@ -11,8 +11,8 @@
             justify-content: space-between;
             &__part01{
                 @include blockSize (calc(100% / 3.1), 100%);
-                // background-image: url(https://blueridgerentals.com/wp-content/uploads/2019/05/blue-ridge-mountains-spring-5-1024x411.jpg);
-                background-image: url(../images/Avatar.jpg);
+                background-image: url(https://blueridgerentals.com/wp-content/uploads/2019/05/blue-ridge-mountains-spring-5-1024x411.jpg);
+                // background-image: url(../images/Avatar.jpg);
                 background-size: cover;
                 background-position: left;
                 @include flexCenter;
