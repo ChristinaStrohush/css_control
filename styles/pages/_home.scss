@@ -1,20 +1,29 @@
 .main{
     width: 80%;
     margin: 20px auto;
+    @include _768{
+        width: 100%;
+    }
     &__about{
         &__tittle{
             @include textMainTittle;
         }
         &__content{
-            @include blockSize (100%, 400px);
+            @include blockSize (100%, 350px);
             display: flex;
             justify-content: space-between;
+            @include _500 {
+                height: 1000px;
+                flex-direction: column;
+            }
             &__part01{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(../images/mountains.jpg);
-                background-size: cover;
-                background-position: left;
+                background-image: url(../images/plan.jpg);
+                @include bgCoverCenter;
                 @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
                 &__conteiner{
                     @include conteinerAbout;
                     &__button{
@@ -23,11 +32,13 @@
                         background-color: $secondColor;
                         border-color: $secondColor;
                         text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
                     }
                     &__tittle{
                         font-family: $mainFontFamily;
                         @include fontChange($mainColor, 24px, 700);
-                        padding: $paddingTotal;
                     }
                     &__discription{
                         font-family: $secondFontFamily;
@@ -38,9 +49,12 @@
             }
             &__part02{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(../images/mountains.jpg);
+                background-image: url(../images/way.jpg);
                 @include bgCoverCenter;
                 @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
                 &__conteiner{
                     @include conteinerAbout;
                     &__button{
@@ -49,11 +63,13 @@
                         background-color: $secondColor;
                         border-color: $secondColor;
                         text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
                     }
                     &__tittle{
                         font-family: $mainFontFamily;
                         @include fontChange($mainColor, 24px, 700);
-                        padding: $paddingTotal;
                     }
                     &__discription{
                         font-family: $secondFontFamily;
@@ -64,10 +80,12 @@
             }
             &__part03{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(../images/mountains.jpg);
-                background-size: cover;
-                background-position: right;
+                background-image: url(../images/sea.jpg);
+                @include bgCoverCenter;
                 @include flexCenter;
+                @include _500{
+                    @include blockSize (100%, calc(100% / 3.1));
+                }
                 &__conteiner{
                     @include conteinerAbout;
                     &__button{
@@ -76,11 +94,13 @@
                         background-color: $secondColor;
                         border-color: $secondColor;
                         text-transform: uppercase;
+                        @include _500{
+                            width: 50%;
+                        }
                     }
                     &__tittle{
                         font-family: $mainFontFamily;
                         @include fontChange($mainColor, 24px, 700);
-                        padding: $paddingTotal;
                     }
                     &__discription{
                         font-family: $secondFontFamily;
@@ -94,6 +114,10 @@
     &__partners{
         @include flexCenter;
         flex-direction: column;
+        @include _768{
+            width: 80%;
+            margin: 0 auto;
+        }
         &__tittle{
             width: 100%;
             @include textMainTittle;
@@ -103,6 +127,9 @@
             display: flex;
             justify-content: space-between;
             padding: 0 0 20px;
+            @include _768{
+                flex-wrap: wrap;
+            }
             &__part01{
                 @include partnersPart;
                 &__image{
@@ -255,6 +282,9 @@
     &__search{
         @include flexCenter;
         flex-direction: column;
+        @include _370{
+            flex-wrap: wrap;
+        }
         &__tittle{
             @include textMainTittle;
         }
@@ -269,6 +299,10 @@
                 color: $mainColor;
                 background-color: $secondColor;
                 border-color: $secondColor;
+                @include _370{
+                    width: 100%;
+                    margin: 10px 0;
+                }
             }
             #interest-search{
                 @include inputMain;

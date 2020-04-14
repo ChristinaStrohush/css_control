@@ -14,6 +14,9 @@
     @include fontChange($mainTittleColor, 26px, 700);
     text-align: center;
     padding: 60px 0 20px;
+    @include _768{
+        font-size: 22px;
+    }
 }
 
 @mixin logoTop {
@@ -31,17 +34,26 @@
 @mixin secondLinkFooter {
     font-family: $secondFontFamily;
     @include fontChange($inputColor, 14px, 300);
+    @include _500{
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @mixin logoDown {
     font-family: $mainFontFamily;
     @include fontChange($secondColor, 20px, 300);
     text-transform: uppercase;
+    @include _500{
+        padding: $paddingTotal;
+    }
 }
 
 @mixin textTittleHeader {
     font-family: $mainFontFamily;
-    @include fontChange($mainColor, 45px, 700);
+    @include fontChange($mainColor, 52px, 700);
     text-transform: uppercase;
 }
 
@@ -58,10 +70,18 @@
     border: 1px solid $inputColorBorder;
     @include fontChange ($inputColor, 14px, 300);
     padding: 6px 100px 6px 6px;
+    @include _500{
+        padding: 6px 30px 6px 6px;  
+    }
+    @include _370{
+        width: 100%;
+    }
 }
 
 @mixin conteinerAbout{
-    @include blockSize (80%, 80%);
+    @include blockSize (80%, 90%);
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @mixin flexCenter {
@@ -71,10 +91,17 @@
 }
 
 @mixin partnersPart {
-    @include blockSize (24%, 100%);
+    @include blockSize (200px, 100%);
+    padding: 10px;
     @include flexCenter;
     flex-direction: column;
     text-align: center;
+    @include _768{
+        width: 50%;
+    }
+    @include _370{
+        width: 100%;
+    }
 }
 
 @mixin bgCoverCenter {
@@ -117,22 +144,53 @@
     @include blockSize (100%, 300px);
     display: flex;
     justify-content: space-between;
+    @include _500{
+        @include blockSize (100%, 100%);
+        flex-wrap: wrap;
+    }
 }
 
 @mixin ideasPhoto{
     @include blockSize (32%, 94%);
     @include bgCoverCenter;
     @include flexCenter;
+    @include _500{
+        @include blockSize (100%, 150px);
+        margin: 7px 0;
+    }
 }
 
 @mixin ideasPhotoBig{
     @include blockSize (66%, 94%);
     @include bgCoverCenter;
     @include flexCenter;
+    @include _500{
+        @include blockSize (100%, 150px);
+        margin: 7px 0;
+    }
 }
 
 @mixin ideasTittle {
     font-family: $mainFontFamily;
     @include fontChange($mainColor, 22px, 700);
     text-shadow: 3px 1px 7px $secondTitleColor;
+    text-align: center;
+}
+
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin _500 {
+    @media (max-width: 500px){
+        @content;
+    }
+}
+
+@mixin _370 {
+    @media (max-width: 370px){
+        @content;
+    }
 }
