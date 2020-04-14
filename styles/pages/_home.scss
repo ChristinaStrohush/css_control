@@ -11,8 +11,7 @@
             justify-content: space-between;
             &__part01{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(https://blueridgerentals.com/wp-content/uploads/2019/05/blue-ridge-mountains-spring-5-1024x411.jpg);
-                // background-image: url(../images/Avatar.jpg);
+                background-image: url(../images/mountains.jpg);
                 background-size: cover;
                 background-position: left;
                 @include flexCenter;
@@ -39,7 +38,7 @@
             }
             &__part02{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(https://blueridgerentals.com/wp-content/uploads/2019/05/blue-ridge-mountains-spring-5-1024x411.jpg);
+                background-image: url(../images/mountains.jpg);
                 @include bgCoverCenter;
                 @include flexCenter;
                 &__conteiner{
@@ -65,7 +64,7 @@
             }
             &__part03{
                 @include blockSize (calc(100% / 3.1), 100%);
-                background-image: url(https://blueridgerentals.com/wp-content/uploads/2019/05/blue-ridge-mountains-spring-5-1024x411.jpg);
+                background-image: url(../images/mountains.jpg);
                 background-size: cover;
                 background-position: right;
                 @include flexCenter;
@@ -108,12 +107,12 @@
                 @include partnersPart;
                 &__image{
                     @include avatar;
-                    background-image: url(https://lgs.lviv.ua/wp-content/uploads/2017/04/8-570x321.jpg);
+                    background-image: url(../images/avatar_01.jpg);
                 }
                 &__image::after{
                     @include avatarAfter;
-                    background-color: $secondColor;
-                    background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/music2.svg);
+                    background-color: #667DF3;
+                    background-image: url(../images/music2.svg);
                 }
                 &__name{
                     @include namePartner;
@@ -126,12 +125,12 @@
                 @include partnersPart;
                 &__image{
                     @include avatar;
-                    background-image: url(https://lgs.lviv.ua/wp-content/uploads/2018/11/image9-4-1024x602-570x321.png);
+                    background-image: url(../images/avatar_02.jpg);
                 }
                 &__image::after{
                     @include avatarAfter;
-                    background-color: #19D4CA;
-                    background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/Shape.svg);
+                    background-color: $secondColor;
+                    background-image: url(../images/Shape.svg);
                 }
                 &__name{
                     @include namePartner;
@@ -144,12 +143,12 @@
                 @include partnersPart;
                 &__image{
                     @include avatar;
-                    background-image: url(https://lgs.lviv.ua/wp-content/uploads/2018/11/image9-7-1024x602-570x321.png);
+                    background-image: url(../images/avatar_03.jpg);
                 }
                 &__image::after{
                     @include avatarAfter;
-                    background-color: #FFA710;
-                    background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/camera.svg);
+                    background-color: #19D4CA ;
+                    background-image: url(../images/camera.svg);
                 }
                 &__name{
                     @include namePartner;
@@ -162,12 +161,12 @@
                 @include partnersPart;
                 &__image{
                     @include avatar;
-                    background-image: url(https://lgs.lviv.ua/wp-content/uploads/2016/07/sokol-e1487628311244-1024x763-570x321.jpg);
+                    background-image: url(../images/avatar_04.jpg);
                 }
                 &__image::after{
                     @include avatarAfter;
-                    background-color: #667DF3;
-                    background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/airplane.svg);
+                    background-color: #FFA710;
+                    background-image: url(../images/airplane.svg);
                 }
                 &__name{
                     @include namePartner;
@@ -197,21 +196,21 @@
                 @include ideasPart;
                 &__photo01{
                     @include ideasPhoto;
-                    background-image: url(https://lasfuentesretirement.com/wp-content/uploads/2017/04/shutterstock_520017307.jpg);
+                    background-image: url(../images/sport.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
                 }
                 &__photo02{
                     @include ideasPhoto;
-                    background-image: url(https://cdn5.superdeal.ua/uploaded/new_campaign_pictures/333148/data/main720x340/600massage.jpg_3.jpg_1_2.jpg);
+                    background-image: url(../images/wellness.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
                 }
                 &__photo03{
                     @include ideasPhoto;
-                    background-image: url(https://online-teacher.ru/image/english/tarzanka.jpg);
+                    background-image: url(../images/extreme.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
@@ -221,14 +220,14 @@
                 @include ideasPart;
                 &__photo04{
                     @include ideasPhoto;
-                    background-image: url(https://static.betconstruct.me/fs/userFiles/sts-mga/images/a-13-poker-15634536219789.jpg);
+                    background-image: url(../images/games.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
                 }
                 &__photo05{
                     @include ideasPhotoBig;
-                    background-image: url(https://lasfuentesretirement.com/wp-content/uploads/2017/04/shutterstock_520017307.jpg);
+                    background-image: url(../images/culture.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
@@ -238,14 +237,14 @@
                 @include ideasPart;
                 &__photo06{
                     @include ideasPhotoBig;
-                    background-image: url(https://c.tadst.com/gfx/750w/relaxation-day-fun.jpg);
+                    background-image: url(../images/relaxation.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }
                 }
                 &__photo07{
                     @include ideasPhoto;
-                    background-image: url(https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555291097/shape/mentalfloss/istock-174105711.jpg);
+                    background-image: url(../images/travel.jpg);
                     &__tittle{
                         @include ideasTittle;
                     }

@@ -41,7 +41,7 @@
 
 @mixin textTittleHeader {
     font-family: $mainFontFamily;
-    @include fontChange($mainColor, 52px, 700);
+    @include fontChange($mainColor, 45px, 700);
     text-transform: uppercase;
 }
 
@@ -83,7 +83,7 @@
 }
 
 @mixin avatar{
-    @include blockSize (200px, 200px);
+    @include blockSize (120px, 120px);
     @include bgCoverCenter;
     border-radius: 50%;
     position: relative;
@@ -91,15 +91,15 @@
 
 @mixin avatarAfter {
     display: block;
-    @include blockSize (50px, 50px);
+    @include blockSize (35px, 35px);
     content: '';
     border-radius: 50%;
-    background-size: 65%;
+    border: 2px solid $mainColor;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 150px;
-    left: 150px;
+    top: 85px;
+    left: 85px;
 }
 
 @mixin namePartner {

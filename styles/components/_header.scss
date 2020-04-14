@@ -1,7 +1,6 @@
 .header{
     @include blockSize (100%, 100vh);
-    background-image: url(https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg);
-    // background-image: url(file:///D:/%D0%A5%D0%A1/HTML/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BA%D0%B8/03.02.20/030220/images/Background.jpg);
+    background-image: url(../images/bridge.jpg);
     @include bgCoverCenter;
     @include flexCenter;
     flex-direction: column;
@@ -37,7 +36,7 @@
         }
         &__second{
             font-family: $secondFontFamily;
-            @include fontChange(#F7F3F2, 24px, 300);
+            @include fontChange(#F7F3F2, 22px, 300);
             padding: 30px;
         }
         &__button{

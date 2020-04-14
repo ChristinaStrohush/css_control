@@ -44,6 +44,12 @@
                 text-transform: uppercase;
                 padding: $paddingTotal;
             }
+            &__logo{
+                @include blockSize (120px, 25px);
+                background-image: url(../images/Bitmap.png);
+                background-position: right;
+                background-repeat: no-repeat;
+            }
         }
     }
 }
